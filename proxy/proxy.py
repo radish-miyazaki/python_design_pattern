@@ -14,7 +14,7 @@ class Proxy(Server):
     def _authorize(self, user_id: str):
         authorized_user_id = ["1", "2", "3"]
 
-        if not user_id in authorized_user_id:
+        if user_id not in authorized_user_id:
             raise Exception("操作が許可されていません")
 
     def handle(self, user_id: str):
